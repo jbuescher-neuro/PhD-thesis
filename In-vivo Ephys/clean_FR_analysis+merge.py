@@ -15,17 +15,6 @@ import seaborn as sns
 from scipy import stats
 sns.set_style("white")
 
-#43 units 8 responding to light full protocol
-base_folder1 = Path('E:/PhD/2. In-vivo Ephys Data/Stim1_B6J-8464/2024-09-13_14-58-00/Record Node 115')
-exp_path1= base_folder1 / 'Exp4_excl'
-
-
-#40 units 3 light responsive, full protocol
-base_folder2 = Path(r'E:/PhD/2. In-vivo Ephys Data/JB_B6J-8636/2024-10-16_14-10-22/Record Node 104')
-exp_path2= base_folder2 / r'Exp1'
-
-combined_path= Path('E:/PhD/2. In-vivo Ephys Data/result/')
-
 #%%
 #Load all fidelities and get clusters, match unit IDs and exclude ones with bad vorrelation
 fid_1= pd.read_csv(exp_path1/ 'FidTest1_fidelity_filtered_with_latency_variance.csv')
@@ -475,3 +464,4 @@ combined_lat2= pd.concat([fid2_1,fid2_2], ignore_index=True)
 combined_lat2["Neuron_ID"] = combined_lat2["Source"].astype(str) + "_" + combined_lat2["NeuronID"].astype(str)
 
 combined_lat2.to_csv(combined_path/'lats_FidTest1.csv')
+
