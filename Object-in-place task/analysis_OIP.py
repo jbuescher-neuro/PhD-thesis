@@ -20,13 +20,6 @@ from scipy.stats import shapiro, levene
 from scipy.stats import friedmanchisquare, f_oneway, wilcoxon
 from statsmodels.stats.anova import AnovaRM
 
-path= r'E:/PhD/1.Object-in-place/3. Pilot3 Chrim_OPn3/'
-path_old= r'\\linstore01/home/jbuesche/Object-in-place/Old cohort1/'
-path_chrim2= r'E:/PhD/1.Object-in-place/7. ChrimsonCohort2/Pooled/'#r'\\linstore01/home/jbuesche/Object-in-place/7. ChrimsonCohort2/'
-path_OPN3= r'\\linstore01/home/jbuesche/Object-in-place/OPN3/'
-path_oldChrim= r'E:/PhD/1.Object-in-place/6. oldChrim/'#r'\\linstore01/home/jbuesche/Object-in-place/6. oldChrim/'
-path_ChR2= r'\\linstore01/home/jbuesche/Object-in-place/8. ChR2 Control/'
-
 
 #%% Creating one Dataframe with data from boris file and experiment information
 def boris2analysis (path, comp):
@@ -1590,4 +1583,5 @@ def heatmaps(path_to_test, ending, hab):
         plt.show()
 
 ending= 'DLC_resnet50_JULIA_DLCJul25shuffle1_940000.csv'
+
 DLC_fiber= 'DLC_resnet50_OIPFiberNetDec30shuffle1_105000.csv'
