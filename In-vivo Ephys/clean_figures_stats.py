@@ -14,16 +14,6 @@ import seaborn as sns
 from scipy import stats
 sns.set_style("white")
 
-#43 units 8 responding to light full protocol
-base_folder1 = Path('E:/PhD/2. In-vivo Ephys Data/Stim1_B6J-8464/2024-09-13_14-58-00/Record Node 115')
-exp_path1= base_folder1 / 'Exp4_excl'
-
-
-#40 units 3 light responsive, full protocol
-base_folder2 = Path(r'E:/PhD/2. In-vivo Ephys Data/JB_B6J-8636/2024-10-16_14-10-22/Record Node 104')
-exp_path2= base_folder2 / r'Exp1'
-
-combined_path= Path('E:/PhD/2. In-vivo Ephys Data/result/')
 
 template= pd.read_csv(combined_path/'template1.csv')
 combined_fid= pd.read_csv(combined_path+'fidelity1_fidtest2.csv')
@@ -636,3 +626,4 @@ plt.axline((0, 0), slope=1, color='k', transform=plt.gca().transAxes, ls= '--')
 plt.savefig(combined_path /'basevsPostprim.svg')#r'basevsPostPrim.tif')
 plt.tight_layout()
 plt.show()"""
+
